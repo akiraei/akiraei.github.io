@@ -30,10 +30,16 @@ theme: minima
 plugins:
 #  - jekyll-feed
 
+
+keep_files:
+  - assets
+  - files
+asset_url: /assets
+
+
 kramdown:
   input: GFM
   highlighter: rouge
-
 
 collections:
   tags:
@@ -46,7 +52,6 @@ defaults:
       type: tags
     values:
       layout: tag
-
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
