@@ -14,7 +14,33 @@ margin-left: 10px;
 }
 
 
-  .rss-subscribe {
+  .feed-subscribe {
     display: none;
   }
 
+  .social-links *{
+    margin-top: 8px;
+  }
+
+  section.about{
+    p {
+      margin-right: 50px;
+      text-align: right;
+    }
+    table {
+      margin-left: 50px;
+      border-width: 0px;
+      * {
+        border-width: 0px;
+      }
+      tr {
+        background-color: white;
+        td:nth-of-type(1){
+          width: 100px;
+          text-align: right;
+        }
+      }
+
+
+    }
+  }

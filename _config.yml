@@ -13,14 +13,17 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: develophoto
+title: develoPhoto
 email: akiraeiphoto@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  welcome!
+  Thank you for your visiting
+  and this is ver 0.1.4
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-instagram_username: akiraei
-github_username:  akiraei
+
+social:
+  instagram: akiraei
+  github:  akiraei
 
 timezone: Asia/Seoul
 date_format: "%Y-%m-%d"
@@ -31,7 +34,8 @@ theme: minima
 
 
 plugins:
-#  - jekyll-feed
+  - jekyll-feed
+
 
 
 kramdown:

@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<h1>{{ page.name }} posts</h1>
+<h1>Tag: {{ page.name }}</h1>
 <ul class="post-list">
     {% for post in site.posts %}
     {% if post.tags contains page.name %}
