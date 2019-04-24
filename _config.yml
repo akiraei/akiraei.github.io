@@ -22,6 +22,9 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 instagram_username: akiraei
 github_username:  akiraei
 
+timezone: Asia/Seoul
+date_format: "%Y-%m-%d"
+
 # Build settings
 markdown: kramdown
 theme: minima
