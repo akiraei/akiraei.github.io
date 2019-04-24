@@ -36,7 +36,9 @@ theme: minima
 plugins:
   - jekyll-feed
 
-
+keep_files:
+  - assets
+asset_url: /assets
 
 kramdown:
   input: GFM
