@@ -1,12 +1,19 @@
 ---
-layout: default
+layout: base
 ---
 
 <h1>Posts in <em>{{ page.name }}</em></h1>
 <ul class="post-list">
     {% for post in site.posts %}
     {% if post.tags contains page.name %}
-    <li class="post-item">hello</li>
+    <li class="post-item">
+        <a
+            href="{{site.baseUrl}}{{post.url}}"
+            >
+        {{post.title}}
+        </a>
+
+    </li>
     {% endif %}
     {% endfor %}
 </ul>

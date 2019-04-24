@@ -1,0 +1,18 @@
+---
+layout: page
+title: Tags
+permalink: /tags/
+---
+
+<h1>Tags</h1>
+<ul class="inline-list">
+    {% for tag in site.tags %}
+    <li>
+        <a
+            href="{{ site.baseurl }}/tags/{{ tag.name }}"
+            >
+            {{tag.name}}
+        </a>
+    </li>
+{% endfor %}
+</ul>
