@@ -1,12 +1,12 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: Tags
+permalink: /tags/
 ---
 
-Welcome!
-
-환영합니다!
+{% for tag in site.tags %}
+ [{{ tag.name }}]({{ site.baseurl }}/tags/{{ tag.name }})
+{% endfor %}
 
 
 <!--
