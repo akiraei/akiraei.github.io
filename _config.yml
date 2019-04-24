@@ -31,12 +31,6 @@ plugins:
 #  - jekyll-feed
 
 
-keep_files:
-  - assets
-  - files
-asset_url: /assets
-
-
 kramdown:
   input: GFM
   highlighter: rouge
