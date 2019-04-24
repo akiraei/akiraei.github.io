@@ -1,5 +1,20 @@
 
-.inline-list li {
-  display: inline;
-  list-style-type: none;
+.inline-list {
+
+
+  li {
+    display: inline;
+    list-style-type: none;
+  }
+
+  li + li {
+margin-left: 10px;
+  }
+
 }
+
+
+  .rss-subscribe {
+    display: none;
+  }
+
