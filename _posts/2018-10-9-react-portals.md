@@ -21,7 +21,7 @@ first-class 방식을 제공한다.
 보통, 컴포넌트의 렌더 메소드를 통해 요소를 반환할 때, 요소는 제일 가까운 부모 요소의 자식과 
 같은 DOM의 안으로 마운트 된다.
 
-```
+```js
 render() {
   // React mounts a new div and renders the children into it
   return (
@@ -32,7 +32,7 @@ render() {
 }
 ```
 그러나, 때때로 자식을 다른 위치의 DOM 안으로 넣는 것은 유용하다
-```
+```js
 render() {
   // 리액트는 새로운 div를 생성하지 않는다. 이것은 'domNode'안으로 자식을 렌더한다.
   // 'domNode'는 어떤 유효한 DOM node이며 DOM 안의 위치와 관계가 없다
@@ -54,7 +54,7 @@ render() {
   여부에 관계없이 정확히 동일하게 작동한다. 이 것은 이벤트 버블링을 포함한다. 포탈 안에서 시동된 
   이벤트는 리액트 트리 안에 함유된 조상에게 전파하는데 비록 이러한 요소가 DOM 트리 안의
    조상이 아니더라 전파한다. html 구조를 가정해본다.
-```
+```html
 <html>
   <body>
     <div id="app-root"></div>
@@ -65,7 +65,7 @@ render() {
 `#app-root` 안의 부모 컴포넌트는 `#modal-root`의 형제 노드 출신인 uncaught, bubbling event 를 잡는 것이 가능하다?!
 
 
-```
+```js
 // 이 두 컨테이너는 DOM안에서 형제이다.
 
 const appRoot = document.getElementById('app-root')
