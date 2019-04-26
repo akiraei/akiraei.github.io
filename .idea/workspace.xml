@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="633ab89f-bb27-48d9-a32f-b85dcbaf6fd2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/_tags/markup.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_draft/2000-01-01-web-lang-convention.md" beforeDir="false" afterPath="$PROJECT_DIR$/_draft/2000-01-01-web-lang-convention.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_draft/2000-01-01-web-lang-convention.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-04-26-markup-convention.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -54,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/_layouts/home.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -63,7 +61,7 @@
         <entry file="file://$PROJECT_DIR$/_layouts/default.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -82,7 +80,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="752">
-                <caret line="193" lean-forward="true" selection-start-line="193" selection-end-line="193" />
+                <caret line="193" selection-start-line="193" selection-end-line="193" />
               </first_editor>
               <second_editor />
             </state>
@@ -90,11 +88,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_draft/2000-01-01-web-lang-convention.md">
+        <entry file="file://$PROJECT_DIR$/_posts/2019-04-26-markup-convention.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="51">
-                <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+              <first_editor relative-caret-position="323">
+                <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
               </first_editor>
               <second_editor />
             </state>
@@ -118,7 +116,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="51">
-                <caret line="3" column="3" lean-forward="true" selection-end-line="3" selection-end-column="3" />
+                <caret line="3" column="3" selection-end-line="3" selection-end-column="3" />
               </first_editor>
               <second_editor />
             </state>
@@ -279,6 +277,7 @@
       <recent name="$PROJECT_DIR$/_posts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/_posts" />
       <recent name="$PROJECT_DIR$/_draft" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -306,7 +305,7 @@
       <option name="presentableId" value="Default" />
       <updated>1555975700737</updated>
       <workItem from="1555975701900" duration="19383000" />
-      <workItem from="1556090979464" duration="14844000" />
+      <workItem from="1556090979464" duration="14937000" />
     </task>
     <task id="LOCAL-00001" summary="ongoing to set tags">
       <created>1556069924755</created>
@@ -333,7 +332,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41735000" />
+    <option name="totallyTimeSpent" value="41828000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2560" y="-947" width="2560" height="1440" extended-state="6" />
@@ -597,7 +596,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2000-01-01-web-lang-convention.md">
+    <entry file="file://$PROJECT_DIR$/_posts/2019-04-26-markup-convention.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor />
@@ -671,7 +670,7 @@
     <entry file="file://$PROJECT_DIR$/_layouts/default.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
@@ -692,7 +691,7 @@
     <entry file="file://$PROJECT_DIR$/_layouts/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
@@ -700,7 +699,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="752">
-            <caret line="193" lean-forward="true" selection-start-line="193" selection-end-line="193" />
+            <caret line="193" selection-start-line="193" selection-end-line="193" />
           </first_editor>
           <second_editor />
         </state>
@@ -717,7 +716,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="51">
-            <caret line="3" column="3" lean-forward="true" selection-end-line="3" selection-end-column="3" />
+            <caret line="3" column="3" selection-end-line="3" selection-end-column="3" />
           </first_editor>
           <second_editor />
         </state>
@@ -733,11 +732,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_draft/2000-01-01-web-lang-convention.md">
+    <entry file="file://$PROJECT_DIR$/_posts/2019-04-26-markup-convention.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="51">
-            <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+          <first_editor relative-caret-position="323">
+            <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
           </first_editor>
           <second_editor />
         </state>
