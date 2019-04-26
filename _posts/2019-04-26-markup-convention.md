@@ -123,7 +123,7 @@ tags: [frontend, css, html, markup]
   - 탭 1 = 공백 4
   - 탭 사용하지 않음
 
--  선택자 그룹핑
+- 선택자 그룹핑
   ```css
   /* X */
   .selector1, .selector2 { ... }
