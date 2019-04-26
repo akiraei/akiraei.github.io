@@ -60,7 +60,8 @@ tags: [frontend, css, html, markup]
 - 섹셔닝 요소와 헤딩 요소를 이용해 문서 개용를 논리적으로 구성
 - 섹셔닝 요소 (`section`, `article`, `nav`, `aside`)에는 헤딩 요소를 명시적으로 사용
 - `h1` 요소를 한 페이지에 한 번만 사용
-  ```html
+  
+```html
   <!-- Bad HTML -->
   <body>
       <h1>동물</h1>
@@ -82,7 +83,7 @@ tags: [frontend, css, html, markup]
           </section>
       </article>
   </body>
-  ```
+```
 
 
 #### 문서 제목 (ref.4)
