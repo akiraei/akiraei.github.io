@@ -3,7 +3,10 @@ layout: post
 title:  리액트 고급 가이드 - Portals
 tags: [frontend, react]
 ---
-
+###### 아래의 내용은 react의 공식 문서를 제 깜냥대로 번역한 것입니다
+___
+<br>
+<br>
 
 ### 개괄
 
