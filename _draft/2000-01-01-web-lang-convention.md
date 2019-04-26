@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Markup Convention  
-tags: [frontend, css, html]
+tags: [frontend, css, html, markup]
 ---
 
 
@@ -110,6 +110,11 @@ tags: [frontend, css, html]
 1. 선택자로 사용하는 `id`, `class` 속성은 가장 앞에 선언
 2. 콘텐츠를 설명하는 `alt`, `title`, `role`, `aria-*` 속성은 가장 뒤에 선언s
 
+
+
+
+
+
 ## CSS
 
 #### CSS 문법 (ref.1)
@@ -169,12 +174,125 @@ tags: [frontend, css, html]
               url('//cdn.lezhin.com/assets/images/footer.png');
       }
   ``` 
+- 괄호(`()`)안에서는 쉼표(`,`)뒤에 공백을 넣지 않습니다.
+   ```html
+  /* X */
+      color: rgba(0, 0, 0, .5);
+  
+  /* O */
+      color: rgba(0,0,0,.5);
+  ```
+  - **공백을 넣는게 좋을 것 같은데**
+- 축약 가능한 값을 축약합니다.
+  ```html
+  /* X */
+      color: #ffffff;
+      font-weight: normal;
+      font-weight: bold;
+      border: none;
+      opacity: 0.5;
+      border-width: 0px;
+      background-size: 100% auto;
+      background-position: 50% 50%;
+  
+  /* O */
+      color: #fff;
+      font-weight: 400;
+      font-weight: 700;
+      border: 0;
+      opacity: .5;
+      border-width: 0;
+      background-size: 100%;
+      background-position: 50%;
+  ```
+  - **축약을 못하게 하는게 더 나을 것 같은데...**
+
+#### 속성(property) 선언 순서 (ref.1)
+- 포지셔닝과 박스모델 관련 속성을 가장 먼저 작성하고 나머지는 뒤에 놓는다.
+  ```css
+  {
+  /* Positioning */
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 100;
+  /* Box-model */
+      display: block;
+      float: right;
+      flex: 1;
+      width: 100px;
+      height: 100px;
+  /* Typography */
+      font: normal 13px "Helvetica Neue", sans-serif;
+      line-height: 1.5;
+      color: #333;
+      text-align: center;
+  /* Background */
+      background-color: #f5f5f5;
+  /* Border */
+      border: 1px solid #e5e5e5;
+      border-radius: 3px;
+  /* etc */
+      opacity: 1;
+  }
+  ```
+  
+#### 미디어 쿼리 위치 (ref.1)
+- 미디어쿼리는 관련 규칙이 있는 자리에 모아 놓는다.
+  ```css
+  .element { ... }
+  .element-avatar { ... }
+  .element-selected { ... }
+  @media (min-width: 640px) {
+      .element { ... }
+      .element-avatar { ... }
+      .element-selected { ... }
+  }
+  ```
+  
+#### 전처리문 계산식 (ref.1)
+- 계산식에 괄호를 사용합니다.
+  ```css
+  /* Bad example */
+  .element { margin: 10px 0 @variable*2 10px; }
+  
+  /* Good example */
+  .element { margin: 10px 0 (@variable * 2) 10px; }
+
+  ```
+  
+#### 클래스 작명 (ref.1)
+- BEM 스타일
+- 카멜케이스, 숫자, 더블 대시(`--`), 더블 언더스코어 (`__`)만 사용
+  - modifier에만 대시(`-`)를 사용한다던가... 카멜대신 스네이크를쓴다던가....
 
 
+#### 선택자 (ref.1)
+- 클래스 선택자만을 사용
+- 여러 클래스를 묶을 때 쉼표 후 개행
+- 선택자 조합과 중첩을 사용하지 않는다. 선택자 우선순위를 높여 이해하기 어렵게 한다.
+  ```css
+  /* Bad example */
+  section.tweet > header { ... }
+  section.tweet > header.tweet__header { ... }
+  .tweet > .tweet__header, .tweet > .tweet__username { ... }
+  
+  /* Good example */
+  .tweet { ... }
+  .tweet__header,
+  .tweet__username { ... }
 
+  ```
+  
+#### 단위 사용 (ref.4)
+- 단위 사용은 다양한 환경의 크로스플랫폼을 위해 절대단위(`px`)를 권장하며, 유동적인 레이아웃 구현 시 상대단위(`em`, `%`)를 사용한다.
 
-
-
+#### z-index (ref.4)
+- 간격은 10단위로
+- 페이지 단위에서는 1000을 넘지 않도록
+- 팝업레이어는 1000부터 시작
 
 
 ## 참고 사례
