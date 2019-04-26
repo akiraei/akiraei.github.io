@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="633ab89f-bb27-48d9-a32f-b85dcbaf6fd2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/_draft/2000-01-01-web-lang-convention.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-04-26-markup-convention.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-04-26-markup-convention.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-04-26-markup-convention.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -91,8 +91,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2019-04-26-markup-convention.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="323">
-                <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+              <first_editor relative-caret-position="601">
+                <caret line="85" selection-start-line="85" selection-end-line="85" />
               </first_editor>
               <second_editor />
             </state>
@@ -145,6 +145,7 @@
       <find>_username</find>
       <find>social.</find>
       <find>social\.</find>
+      <find>고래</find>
     </findStrings>
     <replaceStrings>
       <replace>site.social.</replace>
@@ -201,6 +202,7 @@
         <option value="$PROJECT_DIR$/_tags/html.md" />
         <option value="$PROJECT_DIR$/_tags/markup.md" />
         <option value="$PROJECT_DIR$/_draft/2000-01-01-web-lang-convention.md" />
+        <option value="$PROJECT_DIR$/_posts/2019-04-26-markup-convention.md" />
       </list>
     </option>
   </component>
@@ -305,7 +307,7 @@
       <option name="presentableId" value="Default" />
       <updated>1555975700737</updated>
       <workItem from="1555975701900" duration="19383000" />
-      <workItem from="1556090979464" duration="14937000" />
+      <workItem from="1556090979464" duration="15049000" />
     </task>
     <task id="LOCAL-00001" summary="ongoing to set tags">
       <created>1556069924755</created>
@@ -332,7 +334,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41828000" />
+    <option name="totallyTimeSpent" value="41940000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2560" y="-947" width="2560" height="1440" extended-state="6" />
@@ -735,8 +737,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/2019-04-26-markup-convention.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="323">
-            <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+          <first_editor relative-caret-position="601">
+            <caret line="85" selection-start-line="85" selection-end-line="85" />
           </first_editor>
           <second_editor />
         </state>
