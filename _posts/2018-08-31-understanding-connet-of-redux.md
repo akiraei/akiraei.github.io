@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Redux, connect를 이해하기
-tags: [frontend, backend]
+categories: [redux]
+tags: [frontend, backend, redux]
 ---
 
 

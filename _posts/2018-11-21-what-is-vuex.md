@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Vuex란? 
+title: vuex - 넌 누구니? 
 tags: [frontend]
 ---
 
