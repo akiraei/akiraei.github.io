@@ -60,28 +60,29 @@ tags: [frontend, css, html, markup]
 - 섹셔닝 요소와 헤딩 요소를 이용해 문서 개용를 논리적으로 구성
 - 섹셔닝 요소 (`section`, `article`, `nav`, `aside`)에는 헤딩 요소를 명시적으로 사용
 - `h1` 요소를 한 페이지에 한 번만 사용
+  
 ```html
-<!-- Bad HTML -->
-<body>
-    <h1>동물</h1>
-    <div>
-        <h1>포유류</h1>
-        <div>
-            <h1>고래</h1>
-        </div>
-    </div>
-</body>
-
-<!-- Good HTML -->
-<body>
-    <h1>동물<h1>
-    <article>
-        <h2>포유류<h2>
-        <section>
-            <h3>고래<h3>
-        </section>
-    </article>
-</body>
+  <!-- Bad HTML -->
+  <body>
+      <h1>동물</h1>
+      <div>
+          <h1>포유류</h1>
+          <div>
+              <h1>고래</h1>
+          </div>
+      </div>
+  </body>
+  
+  <!-- Good HTML -->
+  <body>
+      <h1>동물<h1>
+      <article>
+          <h2>포유류<h2>
+          <section>
+              <h3>고래<h3>
+          </section>
+      </article>
+  </body>
 ```
 
 
@@ -123,7 +124,7 @@ tags: [frontend, css, html, markup]
   - 탭 1 = 공백 4
   - 탭 사용하지 않음
 
--  선택자 그룹핑
+- 선택자 그룹핑
   ```css
   /* X */
   .selector1, .selector2 { ... }
@@ -288,6 +289,10 @@ tags: [frontend, css, html, markup]
   
 #### 단위 사용 (ref.4)
 - 단위 사용은 다양한 환경의 크로스플랫폼을 위해 절대단위(`px`)를 권장하며, 유동적인 레이아웃 구현 시 상대단위(`em`, `%`)를 사용한다.
+<<<<<<< HEAD:_draft/2000-01-01-web-lang-convention.md
+=======
+  - **`em` 보다 `rem`**    
+>>>>>>> 5af843993d455f88e3ae3261b5e4b9798af2c231:_draft/2019-04-26-markup-convention.md
 
 #### z-index (ref.4)
 - 간격은 10단위로
