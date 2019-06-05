@@ -50,4 +50,4 @@
 
 - front: input[type=file] --> fileReader --(arrayBuffer)--> dataview --(getUint8(i))--> arr --(axios.post(address, {arr}))
 - back: req.body.arr --> buffer.alloc(req.body.arr.length) --> buffer[i]=req.body.arr[i] --> fs.appendFileSync(name, buffer) 
-- **fs.appendFileSync는 buffer의 데이터가 Uint8인지 어떻게 아는걸까?**
+- [**fs.appendFileSync는 buffer의 데이터가 Uint8인지 어떻게 아는걸까?**](https://nodejs.org/api/buffer.html#buffer_buf_index)
