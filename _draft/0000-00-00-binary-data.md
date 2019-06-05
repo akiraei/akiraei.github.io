@@ -35,5 +35,19 @@
   - `big-endian`은 상위 바이트부터, `little-endian`은 하위 바이트부터 데이터를 저장한다.
   - 산술연산유닛(ALU)은 메모리를 하위 바이트부터 읽기 때문에 `little-endian`이 속도에서 우위를 갖는다.
   - 네트워크 프로토콜 표준으로는 `big-endian`이 사용된다. 역사적으로 라우팅이 전화를 거는 식의 접두 부호로 이루어 졌기 때문이다.
+
+
+
   
 
+- [fs.writeSync](https://nodejs.org/api/fs.html#fs_fs_writesync_fd_buffer_offset_length_position)
+- [ArrayBuffer](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
+- [DataView](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/DataView)
+- [413 error](https://webisfree.com/2018-03-29/nginx-413-request-entity-too-large-%EC%97%90%EB%9F%AC-%ED%95%B4%EA%B2%B0%ED%95%98%EA%B8%B0-%ED%8C%8C%EC%9D%BC-%EC%97%85%EB%A1%9C%EB%93%9C-%EC%82%AC%EC%9D%B4%EC%A6%88)
+- js: array-buffer, nodejs: buffer
+
+
+
+- front: input[type=file] --> fileReader --(arrayBuffer)--> dataview --(getUint8(i))--> arr --(axios.post(address, {arr}))
+- back: req.body.arr --> buffer.alloc(req.body.arr.length) --> buffer[i]=req.body.arr[i] --> fs.appendFileSync(name, buffer) 
+- **fs.appendFileSync는 buffer의 데이터가 Uint8인지 어떻게 아는걸까?**
