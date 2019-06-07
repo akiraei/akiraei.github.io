@@ -1,0 +1,1 @@
+[다중화와 역다중화](https://the-brain-of-sic2.tistory.com/52)
