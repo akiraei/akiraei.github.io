@@ -1,5 +1,16 @@
+---
+layout: post
+title: Manipulating Binary Data (TWIL) 
+categories: [frontend]
+tags: [frontend, html]
+---
 
 ## [Binary Data 조작하기](http://mohwa.github.io/blog/javascript/2015/08/31/binary-inJS/)
+
+모든 파일은 결국 이진데이터이며 이를 조작하는 것은 문자나 객체 이외의 데이터를 전송하는데 필수적인 기술이다.
+
+### 기초 지식 
+
 - `Blob` 유형
   - `Blob`은 미디어 파일과 같은 큰 용량의 파일
   - `Blob Object`는 File과 같은 불변객체(immutable); raw data를 갖는다.
