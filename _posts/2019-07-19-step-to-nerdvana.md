@@ -9,7 +9,6 @@ tags: [programming]
 ### STEP 1
 
 - 뭐가 되는지 모름
-- 되도 할 줄 모름
 
 ### STEP 2
 
