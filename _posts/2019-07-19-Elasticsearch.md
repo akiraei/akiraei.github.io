@@ -14,6 +14,12 @@ tags: [database, backend, search]
 - RDBMS보다 FTS에서 빠른 성능
 
 
+
+### [http로 통신](https://12bme.tistory.com/171)
+
+
+
+
 ### [javascript client](https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/index.html)
 Elasticsearch는 JS 클라이언트를 지원한다.
 
@@ -27,7 +33,6 @@ Elasticsearch는 JS 클라이언트를 지원한다.
   - `npm install @elastic/elasticsearch`
   
   ```js
-'use strict'
 
 const { Client } = require('@elastic/elasticsearch')
 const client = new Client({ node: 'http://localhost:9200' })
@@ -85,4 +90,81 @@ run().catch(console.log)
 
 
 
+### [MYSQL과 연결 - LOGSTASH](https://geniedev.tistory.com/6)
+
+#### logstash?
+  - 정보를 가공해서 연결해 주는 pub-sub?!
+  - input 받고 output 하는데 굉장히 많은 선택지를 가지고 있다.
+ 
+#### logstash의 주요 라인
+  - input
+      - data를 받아오는 곳
+      - ex) sql
+  - filter
+      - 가공
+  - ouput
+      - data를 보내는 곳
+      - ex) elasticsearch
+ - codec
+      - 데이터의 포맷
+      - ex) rubydebug, json
+
+
+#### JDBC
+ - JDBC는 Java와 Oracle을 이어주는 역할을 한다.
+ - 이를 통해 logstash와 mysql을 연결한다.
+ - ~~최신 logstash에는 내장 되어 있다.~~
+ 
+
+#### [은전한닢](https://bitbucket.org/eunjeon/seunjeon/src/6e8a067fb9a12bcdcdd7f858fd84714c94835f04/elasticsearch/)
+ - 한국어 검색에서 형태소 분해를 위한 분석기가 필요하다.
+ - 은전한닢은 `훌륭한 오픈소스 한국어 형태소 분석기`란다.
+ 
+#### [Nori 웨비나](https://www.elastic.co/kr/webinars/nori-elasticsearch-korean-text-analyzer)
+ - 은전한닢이 훌륭하다면 Nori 웨비나는 공식이다.
+ - **공식**으로 가자
+ 
+ 
+#### 실행
+ - logstash를 설치
+      - [docker](https://www.elastic.co/guide/en/logstash/5.4/docker.html): `docker pull docker.elastic.co/logstash/logstash:5.4.3`
+      - [brew](https://www.elastic.co/guide/en/logstash/7.2/installing-logstash.html#brew)
+          - JDk8: `brew cask install homebrew/cask-versions/adoptopenjdk8` 
+          - open tap: `brew tap elastic/tap`
+          - install logstash: `brew install elastic/tap/logstash-full`
+ - [jdbc-plugin](https://www.elastic.co/guide/en/logstash/current/plugins-inputs-jdbc.html)~~을 설치~~
+ - ~~은전한닢~~Nori 웨비나를 설치
+ - logstash와 mysql을 jdbc로 연결
+      - logstash.yml을 생성
+      - 내용을 작성
+ ```
+                input {
+                      jdbc {
+                            jdbc_driver_library => "mysql-connector-java-5.1.36-bin.jar"
+                            jdbc_driver_class => "com.mysql.jdbc.Driver"
+                            jdbc_connection_string => "jdbc:mysql://localhost:3306/"
+                            jdbc_user => "********"
+                            jdbc_password => "********"
+                            parameters => { "favorite_artist" => "Beethoven" }
+                            schedule => "* * * * *"
+                            statement => "SELECT * from [as you want]"
+                            }
+                      }
+             output {
+                 elasticsearch {
+                     hosts = ["localhost:9200"]
+                 }    stdout {
+                     codec = rubydebug
+                 }
+             }
+```
+ - logstash를 logstash.yml을 적용해서 실행
+      - docker: `docker run --rm -it -v ~/settings/logstash.yml:[logstash.yml의 주소]  docker.elastic.co/logstash/logstash:5.4.3`
+      - brew
+          1. `brew services start elastic/tap/logstash-full`
+          1. `logstash`
+ - ~~은전한닢~~Nori 웨비나를 분석기(analyzer, tokenizer)로 적용해서 index를 생성
+     - http `POST`의 내용으로 보낼 수도 있고, javascript client로 입력할 수도 있다.
+     
+     
 
