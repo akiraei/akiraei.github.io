@@ -96,7 +96,7 @@ run().catch(console.log)
   - 정보를 가공해서 연결해 주는 pub-sub?!
   - input 받고 output 하는데 굉장히 많은 선택지를 가지고 있다.
  
-#### logstash의 주요 라인
+#### logstash pipeline의 주요소
   - input
       - data를 받아오는 곳
       - ex) sql
@@ -133,7 +133,12 @@ run().catch(console.log)
           - open tap: `brew tap elastic/tap`
           - install logstash: `brew install elastic/tap/logstash-full`
  - [jdbc-plugin](https://www.elastic.co/guide/en/logstash/current/plugins-inputs-jdbc.html)~~을 설치~~
- - ~~은전한닢~~Nori 웨비나를 설치
+      - 도커 이미지에 접속한다: `docker exec -it [docker container id] /bin/bash`
+      - 설치: `/bin/elasticsearch-plugin install jdbc` 
+ - ~~은전한닢~~[Nori 웨비나를 설치](https://wedul.site/517)
+      - 도커 이미지에 접속한다: `docker exec -it [docker container id] /bin/bash`
+      - 설치: `/bin/elasticsearch-plugin install analysis-nori` 
+      - 재실행 후 확인: `(get) http://localhost:9200/_cat/plugins`
  - logstash와 mysql을 jdbc로 연결
       - logstash.yml을 생성
       - 내용을 작성
@@ -167,4 +172,5 @@ run().catch(console.log)
      - http `POST`의 내용으로 보낼 수도 있고, javascript client로 입력할 수도 있다.
      
      
+
 
