@@ -49,12 +49,18 @@ input {
 output {
     elasticsearch {
         hosts => ["localhost:9200"] // 타입 배열?!. 안에 들어있는 9200은 docker로 띄운 엘라스틱서치의 주소
+        user => "logstash_system"
+        password => "NAiEx0q7Jy144G0nlTBG"
     }    
     stdout {
         codec => rubydebug
     }
 }              
 ```
+
+- 주의 사항
+    1. elasticsearch [계정정보](https://principle486.tistory.com/entry/Attempted-to-resurrect-connection-to-dead-ES-instance-but-got-an-error)
+
 
 - [dockerfile로 연결하기](https://www.elastic.co/guide/en/logstash/current/docker-config.html)
 
