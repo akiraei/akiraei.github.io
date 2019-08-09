@@ -24,18 +24,68 @@ tags: [programming]
  - 데이터 중심의 접근에서 순수한 도메인 모델/로직에 집중
  - 도메인 전문가와 소프트웨어 개발자 간의 단일화된 언어체계를 구축
 
-### Mocha
+### [Mocha](https://mochajs.org/)
 
  - BDD를 위한 라이브러리
 
+#### Run cycle overview
+
+```
+run 'mocha spec.js'
+|
+spawn child process
+|
+|--------------> inside child process
+  process and apply options
+  |
+  run spec file/s
+  |
+  |--------------> per spec file
+    suite callbacks (e.g., 'describe')
+    |
+    'before' root-level pre-hook
+    |
+    'before' pre-hook
+    |
+    |--------------> per test
+      'beforeEach' root-level pre-hook
+      |
+      'beforeEach' pre-hook
+      |
+      test callbacks (e.g., 'it')
+      |
+      'afterEach' post-hook
+      |
+      'afterEach' root-level post-hook
+    |<-------------- per test end
+    |
+    'after' post-hook
+    |
+    'after' root-level post-hooks
+  |<-------------- per spec file end
+|<-------------- inside child process end
+
+```
+
+
 #### describe
+
+ - 테스트 코드의 시작. parameter로 첫번째는 테스트 단위의 이름, 두번째는 함수를 받는다.
+ - describe 안에 또 다른 describe가 있을 수 있다.
 
 #### it
 
+ - describe 안에서 목적으로 실행되는 부분.
+ - 첫번째 parameter로 이름을 받고, 두번째 parameter로 실행될 함수를 받는다.
+ - 두번째 parameter의 함수에서 assertion을 실행한다.
 
-
-
-
+#### hooks
+ - 하나의 describe block 내에서, 개별 테스트에 해당하는 describe에 대해서 실행되는 hook(함수)이다. 
+ - 첫번째 parameter로 이름을 받고, 두번째 parameter로 함수를 받는다.
+ - before: block 내의 모든 테스트들 이전에 실행됨 
+ - after: block 내의 모든 테스트들 이후에 실행됨
+ - beforeEach: block 내의 모든 테스트들 각자의 이전에 실행됨
+ - afterEach: block 내의 모든 테스트들 각자의 이후에 실행됨
 
 ### [Assertion](https://ko.wikipedia.org/wiki/%ED%91%9C%EB%AA%85)
 
