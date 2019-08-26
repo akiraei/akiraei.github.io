@@ -101,4 +101,5 @@ ADD /mysql-connector-java-8.0.17/mysql-connector-java-8.0.17.jar /jdbc/
     - `docker run --rm -it -v ~/settings/logstash.yml:[logstash.yml의 주소] [docker_image]`
     - 예시: `docker run --rm -it -v ~/settings/logstash.yml:/usr/share/logstash/config/logstash.yml docker.elastic.co/logstash/logstash:7.3.0`
 
-
+#### 실행
+- `docker run -p 9600:9600 --name <닉네임> <build한 docker image>`
