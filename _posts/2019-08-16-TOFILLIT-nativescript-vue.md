@@ -32,15 +32,21 @@ $ npm run watch:<platform>
 
 #### [Nativescript Playground](https://nativescript-vue.org/ko/docs/getting-started/quick-start/)
 
+- native-script를 보다 쉽게 경험해 보기 위한 페이지
+- 코드를 작성하고 QR 코드를 native-script 앱에서 인식하면, native-script-preview 앱에서 시연할 수 있다.
+
 
 
 
 ### Install
 
 
-
-
-
+#### [NS set up](https://docs.nativescript.org/start/ns-setup-os-x)
+#### ns-vue set up
+ - `$ npm install -g nativescript`
+ - `tns`
+     - native-script 명령문
+     - `tns preview` 등이 있음
 
 
 
@@ -49,7 +55,6 @@ $ npm run watch:<platform>
 #### [Nativescript Template](https://nativescript-vue.org/ko/docs/getting-started/templates/)
 #### [Nativescript Plugin](https://nativescript-vue.org/ko/docs/getting-started/nativescript-plugins/)
 #### [Vue Plugin](https://nativescript-vue.org/ko/docs/getting-started/vue-plugins/)
-
 
 
 
@@ -68,8 +73,15 @@ $ npm run watch:<platform>
 ### Elements
 
 #### layout
-#### action-bar
-#### components
-#### dialogs
+- 화면을 구성하는 layout
+- 엘리먼트들은 모두 layout안에서 인식된다.
 
+#### action-bar
+- ios의 상단에서 상태를 보여주는 native 바
+
+#### components
+- 화면의 요소들
+
+#### dialogs
+- 경고창, 확인창과 같은 dialog
 
