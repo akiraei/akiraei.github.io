@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Google Tag Manager(TWIL)
+title: Google Tag Manager
 categories: [database]
 tags: [database, bigdata, front-end, back-end]
 ---
