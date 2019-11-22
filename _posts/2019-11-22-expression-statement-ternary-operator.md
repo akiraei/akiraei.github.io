@@ -9,8 +9,8 @@ tags: [js]
 
 express.js 실행시
 ```js
-a ? b : throw err // err 발생. 구동 불가
-if(a){b;}else{throw err} // 구동 됨
+a ? b : throw 'err call' // err 발생 ('err call'). 구동 불가
+if(a){b;}else{throw 'err call'} // 구동 됨
 ```
 
 왜?!
